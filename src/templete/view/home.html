@@ -1,0 +1,22 @@
+<div class="cont">
+    <div class="aheader">
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+        </nav>
+    </div>
+    <div class="aform">
+        <div>
+            <input type="text" ng-model="newTask.task_name" class="txt" placeholder="Enter a task...">
+            <button ng-click="addTask()" class="btn btn-success">Add Task</button>
+        </div>
+        <ul>
+            <li ng-repeat="task in tasks" class="atask-item">
+                <p>{{task.task_name}}</p>
+                <button ng-click="deleteTask(task)" class="btn btn-danger">Delete</button>
+                <button ng-click="editTask(task)" class="btn btn-warning">Edit</button>
+            </li>
+        </ul>
+    </div>
+</div>
+
